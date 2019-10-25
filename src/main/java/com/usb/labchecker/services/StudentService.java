@@ -34,17 +34,20 @@ public class StudentService {
     public Student update(int id, StudentDto studentDto) {
         Student studentToUpdate = studentRepository.getOne(id);
 
-        if(Objects.nonNull(studentDto.getName()))
-            studentToUpdate.setName(studentDto.getName());
+        if(Objects.nonNull(studentDto.getFirstName()))
+            studentToUpdate.setFirstName(studentDto.getFirstName());
 
-        if(Objects.nonNull(studentDto.getGroup()))
-            studentToUpdate.setGroup(studentDto.getGroup());
+        if(Objects.nonNull(studentDto.getLastName()))
+            studentToUpdate.setLastName(studentDto.getLastName());
 
-        if(Objects.nonNull(studentDto.getEmail()))
-            studentToUpdate.setEmail(studentDto.getEmail());
+        if(Objects.nonNull(studentDto.getGroupId()))
+            studentToUpdate.setGroupId(studentDto.getGroupId());
 
-        if(Objects.nonNull(studentDto.getGithubUrl()))
-            studentToUpdate.setGithubUrl(studentDto.getGithubUrl());
+        if(Objects.nonNull(studentDto.getGithubLink()))
+            studentToUpdate.setGithubLink(studentDto.getGithubLink());
+
+        if(Objects.nonNull(studentDto.getTelegramLink()))
+            studentToUpdate.setTelegramLink(studentDto.getTelegramLink());
 
         studentRepository.save(studentToUpdate);
         return studentToUpdate;

@@ -11,18 +11,22 @@ import javax.persistence.Id;
 public class Student {
 
     @Id
+    @Column(name = "id_student")
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "first_name")
+    private String firstName;
 
-    @Column(name = "group")
-    private String group;
+    @Column(name = "last_name")
+    private String lastName;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "id_group")
+    private String groupId;
 
-    @Column(name = "githubUrl")
-    private String githubUrl;
+    @Column(name = "telegram_link")
+    private String telegramLink;
+
+    @Column(name = "git_hub_link")
+    private String githubLink;
 
 }

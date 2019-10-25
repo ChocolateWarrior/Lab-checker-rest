@@ -5,9 +5,10 @@ import lombok.Data;
 @Data
 public class StudentDto {
 
-    private String name;
-    private String group;
-    private String email;
-    private String githubUrl;
+    private String firstName;
+    private String lastName;
+    private String groupId;
+    private String telegramLink;
+    private String githubLink;
 
 }
